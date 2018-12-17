@@ -1,0 +1,34 @@
+#Source
+https://backyardrobotics.eu/2017/11/27/build-a-balancing-bot-with-openai-gym-pt-i-setting-up/
+
+#install miniconda
+conda create -n balance_bot python=3.6
+source activate balance_bot
+
+#Install mujoco
+Download key from website
+Follow instructions where to place it
+place this into ~/.bashrc
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/home/ruben/.mujoco/mjpro150/bin"
+source ~/.bashrc
+pip3 install -U 'mujoco-py<1.50.2,>=1.50.1'
+
+#Install gym dependencies
+apt install -y python3-dev zlib1g-dev libjpeg-dev cmake swig python-pyglet python3-opengl libboost-all-dev libsdl2-dev \
+    libosmesa6-dev patchelf ffmpeg xvfb
+
+#Install baselines dependencies
+sudo apt-get update && sudo apt-get install cmake libopenmpi-dev python3-dev zlib1g-dev
+
+#Install pybullet
+sudo pip3 install gym baselines pybullet
+
+
+#Export Environment
+#you can export your Anaconda environment using:
+
+conda env export > environment.yml
+#And recreate it using:
+
+conda env create -f environment.yml
+
