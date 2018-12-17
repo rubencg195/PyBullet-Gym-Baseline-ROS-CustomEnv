@@ -1,2 +1,2 @@
-# PyBullet-Gym-Baseline-ROS-CustomEnv
+# PyBullet-OpenAIGym-Baseline-ROS-CustomEnv
 ![Alt text](/demo.png?raw=true )
